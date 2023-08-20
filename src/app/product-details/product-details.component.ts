@@ -9,6 +9,7 @@ import { ProductService } from '../product.service';
 })
 export class ProductDetailsComponent implements OnInit {
   product: any;
+  loading: boolean = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -21,6 +22,7 @@ export class ProductDetailsComponent implements OnInit {
     if (productId) {
       this.productService.getProduct(productId).subscribe((data: any) => {
         this.product = data.data;
+        this.loading = false
       });
     }
   }

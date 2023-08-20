@@ -6,6 +6,13 @@ import { AppComponent } from './app.component';
 import { MasonryGridComponent } from './masonry-grid/masonry-grid.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 
 @NgModule({
   declarations: [
@@ -14,8 +21,14 @@ import { HttpClientModule } from '@angular/common/http';
     ProductDetailsComponent
   ],
   imports: [
+    MatCardModule,
     BrowserModule,
+    MatProgressSpinnerModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule,
+    MatIconModule,
     FormsModule,
     HttpClientModule
   ],

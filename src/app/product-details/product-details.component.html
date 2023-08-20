@@ -1,6 +1,13 @@
-<div *ngIf="product">
-  <img [src]="product.image" alt="{{ product.name }}" />
-  <h2>{{ product.name }}</h2>
-  <p>{{ product.currency }} {{ product.price }}</p>
-  <p>{{ product.description }}</p>
+<mat-card *ngIf="product" class="product-card">
+  <img mat-card-image [src]="product.image" alt="{{ product.name }}" />
+  <mat-card-content>
+    <h2>{{ product.name }}</h2>
+    <p><strong>{{ product.currency }}</strong> {{ product.price }}</p>
+    <p>{{ product.description }}</p>
+  </mat-card-content>
+</mat-card>
+
+<div class="loading-card" *ngIf="loading">
+  <div class="loader"></div>
+  <p>Loading...</p>
 </div>
