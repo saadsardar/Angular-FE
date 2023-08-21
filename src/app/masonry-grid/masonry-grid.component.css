@@ -28,6 +28,10 @@ Style for the search container .search-container {
     gap: 20px;
 }
 
+.search-buttons {
+    margin-left: 10px;
+}
+
 .masonry-item {
     flex: 1;
     background: #975A58;
@@ -37,7 +41,6 @@ Style for the search container .search-container {
     font-size: 2rem;
     padding: 1rem;
     width: calc(25% - 20px);
-    /* Four items in one row */
     margin-bottom: 20px;
 }
 
